@@ -17,6 +17,6 @@ macos:
   - run:date
 depends:
 needs:[ubuntu, windows, macos]
-runs-on:macoS-latest
+runs-on:macos-latest
 steps:
 - run:date
