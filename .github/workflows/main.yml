@@ -12,11 +12,11 @@ windows:
   steps:
   - run:date
 macos:
-  runs-on:macoS-latest
+  runs-on:macos-latest
   steps:
   - run:date
 depends:
-needs:[ubunntu, windows, macos]
+needs:[ubuntu, windows, macos]
 runs-on:macoS-latest
 steps:
 - run:date
