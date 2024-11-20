@@ -2,24 +2,21 @@ name: Complex
 
 on: push
 
-Jobs:
-Job1:
-name:first Job
-runs-on:ubuntu-latest
-steps:
--run:date
-Job2:
-name:second Job
-runs-on:window-latest
-steps:
--run:date
-Job3:
-name:third Job
-runs-on:macoS-latest
-steps:
--run:date
+jobs:
+ubuntu:
+  runs-on: ubuntu-latest
+  steps:
+  - run:date
+windows:
+  runs-on: window-latest
+  steps:
+  - run:date
+macos:
+  runs-on:macoS-latest
+  steps:
+  - run:date
 depends:
-needs:[first Job, second Job, third Job]
+needs:[ubunntu, windows, macos]
 runs-on:macoS-latest
 steps:
--run:date
+- run:date
